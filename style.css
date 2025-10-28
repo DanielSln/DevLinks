@@ -4,17 +4,25 @@
   box-sizing: border-box;
 }
 
+/* light mode */
+:root {
+  --text-color: white
+  --bg-url: url(./assets/bg-mobile.jpg;);
+}
+
+.light {
+  --text-color: black;
+  --bg-url: url(./assets/bg-mobile-light.jpg);
+}
+
 body {
   /* Mobile Background */
-  background-image: url(./assets/bg-mobile.jpg);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
+  background: var(--bg-url) no-repeat top center/cover;
 }
 
 body * {
   font-family: "Inter", sans-serif;
-  color: #ffffff;
+  color: var(--text-color);
 }
 
 #container {
@@ -65,7 +73,7 @@ ul li a {
 
 ul li a:hover {
   background: rgba(255, 255, 255, 0.5);
-  border: 1px solid white;
+  border: 1px solid var(--text-color);
 }
 
 /* Social Links */
